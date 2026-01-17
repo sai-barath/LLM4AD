@@ -197,7 +197,7 @@ class ProfilerBase:
                 if score is None:
                     if self._num_objs < 2:
                         print(
-                            f'Sample{self._num_samples}: Score=None    Cur_Best_Score={self._cur_best_program_score: .3f}')
+                            f'Sample{self._num_samples}: Score=None    Cur_Best_Score={self._cur_best_program_score: .9f}')
                     else:
                         # Format the list of best scores dynamically
                         best_scores_str = ", ".join([f"{s: .3f}" for s in self._cur_best_program_score])
@@ -206,11 +206,11 @@ class ProfilerBase:
                 else:
                     if self._num_objs < 2:
                         print(
-                            f'Sample{self._num_samples}: Score={score: .3f}     Cur_Best_Score={self._cur_best_program_score: .3f}')
+                            f'Sample{self._num_samples}: Score={score: .9f}     Cur_Best_Score={self._cur_best_program_score: .9f}')
                     else:
                         # Format both current scores and best scores dynamically
-                        scores_str = ", ".join([f"{s: .3f}" for s in score])
-                        best_scores_str = ", ".join([f"{s: .3f}" for s in self._cur_best_program_score])
+                        scores_str = ", ".join([f"{s: .9f}" for s in score])
+                        best_scores_str = ", ".join([f"{s: .9f}" for s in self._cur_best_program_score])
                         print(
                             f'Sample{self._num_samples}: Score=[{scores_str}]     Cur_Best_Score=[{best_scores_str}]')
 

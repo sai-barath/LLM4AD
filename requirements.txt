@@ -16,5 +16,6 @@ gym
 datasets
 huggingface_hub
 networkx
+pymoo
 # langchain_ollama
 git+https://github.com/XAI-liacs/LLaMEA.git@main        #New method.
